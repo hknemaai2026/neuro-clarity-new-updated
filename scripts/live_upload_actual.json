@@ -1,0 +1,48 @@
+{
+  "url": "https://protest.nemaai.com/upload",
+  "pathname": "/upload",
+  "title": "NEMA AI - EEG Dementia Screening Dashboard",
+  "h1": [
+    "New EEG Screening"
+  ],
+  "h2": [
+    "Select Screening Module"
+  ],
+  "h3": [
+    "EEG Cognitive Screening",
+    "EEG Technician Report",
+    "EEG Signal Analysis"
+  ],
+  "h4": [],
+  "buttons": [
+    {
+      "text": "3",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10 relative"
+    },
+    {
+      "text": "Test Hospital Clinician",
+      "className": "justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 py-2 flex items-center gap-2 px-3"
+    },
+    {
+      "text": "Patients",
+      "className": "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all text-sidebar-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-accent-foreground"
+    },
+    {
+      "text": "Continue",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+    }
+  ],
+  "inputs": [],
+  "labels": [],
+  "badges": [
+    {
+      "text": "3",
+      "className": "absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-risk-high text-[10px] font-bold text-primary-foreground"
+    },
+    {
+      "text": "Step 1 of 6",
+      "className": "inline-flex items-center rounded-full border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground text-xs px-3 py-1"
+    }
+  ],
+  "bodySnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. New EEG Screening Complete all steps to generate a clinical report Step 1 of 6 Module Patient Details Medications Upload EEG Quality Select Screening Module Choose the analysis pipeline before adding patient details EEG Cognitive Screening CognEEG-powered brain health report. Identifies early cognitive risk, brain fog indicators, and dementia biomarkers from the EEG signal. EEG Technician Report Standard EEG reading and signal analysis. Suitable for routine neurological reviews, documentation, and technician sign-off. EEG Signal Analysis Deep signal-level EEG analysis. Reviews waveform patterns, sleep stages, and spectral markers for detailed neurological insight. Continue"
+}

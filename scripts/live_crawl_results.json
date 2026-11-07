@@ -1,0 +1,1360 @@
+{
+  "/": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/upload": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/patients": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/reports": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/eeg-technician-report": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/neuro-intake": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/longitudinal": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/evidence": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/settings": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  },
+  "/admin": {
+    "url": "https://protest.nemaai.com/admin",
+    "pathname": "/admin",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "404"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [],
+    "tables": [],
+    "inputs": [],
+    "sidebarLinks": [],
+    "headerText": "",
+    "mainSummary": "404 Oops! Page not found Return to Home"
+  },
+  "/admin-keys": {
+    "url": "https://protest.nemaai.com/admin-keys",
+    "pathname": "/admin-keys",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "NEMA Admin"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "Access Admin Panel"
+    ],
+    "tables": [],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "password",
+        "placeholder": "Enter admin secret",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [],
+    "headerText": "",
+    "mainSummary": "NEMA Admin Invite key & account management Admin Secret Access Admin Panel"
+  },
+  "/followups": {
+    "url": "https://protest.nemaai.com/followups",
+    "pathname": "/followups",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "404"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [],
+    "tables": [],
+    "inputs": [],
+    "sidebarLinks": [],
+    "headerText": "",
+    "mainSummary": "404 Oops! Page not found Return to Home"
+  },
+  "/eeg-analysis": {
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "title": "NEMA AI - EEG Dementia Screening Dashboard",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "sidebarLinks": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "headerText": "3 Test Hospital Clinician",
+    "mainSummary": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% Hig"
+  }
+}

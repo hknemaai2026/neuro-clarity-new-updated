@@ -1,0 +1,230 @@
+{
+  "url": "https://protest.nemaai.com/",
+  "title": "NEMA AI - EEG Dementia Screening Dashboard",
+  "h1": [
+    "Dashboard"
+  ],
+  "h2": [],
+  "h3": [
+    "Patient Screening Summary",
+    "Upcoming Follow-Ups",
+    "Age Distribution & Insights"
+  ],
+  "h4": [],
+  "buttons": [
+    {
+      "text": "3",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10 relative"
+    },
+    {
+      "text": "Test Hospital Clinician",
+      "className": "justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 py-2 flex items-center gap-2 px-3"
+    },
+    {
+      "text": "Patients",
+      "className": "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all text-sidebar-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-accent-foreground"
+    },
+    {
+      "text": "Choose a date range",
+      "className": "whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 flex w-full items-center justify-between gap-2 px-3 py-2 text-sm text-foreground"
+    },
+    {
+      "text": "Reset",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "View",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "Trends",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "View",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "Trends",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "View",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "Trends",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "View",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "Trends",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "View",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "Trends",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    },
+    {
+      "text": "Add",
+      "className": "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 gap-1"
+    },
+    {
+      "text": "5 overdue (>90 days)",
+      "className": "w-full flex items-center justify-between px-3 py-2.5 text-left hover:bg-orange-100 transition-colors"
+    },
+    {
+      "text": "Schedule",
+      "className": "flex-shrink-0 flex items-center gap-1 text-[11px] font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded px-2 py-1 transition-colors"
+    },
+    {
+      "text": "Schedule",
+      "className": "flex-shrink-0 flex items-center gap-1 text-[11px] font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded px-2 py-1 transition-colors"
+    },
+    {
+      "text": "Schedule",
+      "className": "flex-shrink-0 flex items-center gap-1 text-[11px] font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded px-2 py-1 transition-colors"
+    },
+    {
+      "text": "Schedule",
+      "className": "flex-shrink-0 flex items-center gap-1 text-[11px] font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded px-2 py-1 transition-colors"
+    },
+    {
+      "text": "Schedule",
+      "className": "flex-shrink-0 flex items-center gap-1 text-[11px] font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded px-2 py-1 transition-colors"
+    },
+    {
+      "text": "All Time",
+      "className": "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
+    },
+    {
+      "text": "All Patients",
+      "className": "flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 w-full"
+    },
+    {
+      "text": "Age Distribution & Insights 27 patients",
+      "className": "w-full flex items-center justify-between px-5 py-4 hover:bg-muted/30 transition-colors"
+    }
+  ],
+  "badges": [
+    {
+      "text": "3",
+      "className": "absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-risk-high text-[10px] font-bold text-primary-foreground"
+    },
+    {
+      "text": "48.67%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate max-w-[140px] truncate inline-block"
+    },
+    {
+      "text": "48.67%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate max-w-[140px] truncate inline-block"
+    },
+    {
+      "text": "74.66%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-semibold"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high max-w-[140px] truncate inline-block"
+    },
+    {
+      "text": "98.17%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-semibold"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high max-w-[140px] truncate inline-block"
+    },
+    {
+      "text": "86.95%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-semibold"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high max-w-[140px] truncate inline-block"
+    },
+    {
+      "text": "routine",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary hover:bg-secondary/80 ml-2 text-xs text-green-700"
+    },
+    {
+      "text": "routine",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary hover:bg-secondary/80 ml-2 text-xs text-green-700"
+    },
+    {
+      "text": "moderate",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary hover:bg-secondary/80 ml-2 text-xs text-yellow-700"
+    },
+    {
+      "text": "27 patients",
+      "className": "rounded-full bg-primary/10 text-primary text-xs font-medium px-2 py-0.5"
+    }
+  ],
+  "table": [
+    {
+      "th": [
+        "Patient Name",
+        "Age / Sex",
+        "Risk Percentage",
+        "Risk Level",
+        "Last Screening",
+        "Actions"
+      ],
+      "trSample": [
+        [
+          "test ID: P011",
+          "23 / F",
+          "48.67%",
+          "Moderate Cognitive Risk",
+          "11/6/2026",
+          "View Trends"
+        ],
+        [
+          "sub-01 ID: Test1",
+          "65 / M",
+          "48.67%",
+          "Moderate Cognitive Risk",
+          "10/16/2026",
+          "View Trends"
+        ],
+        [
+          "test ID: P0011",
+          "24 / M",
+          "74.66%",
+          "High Cognitive Risk",
+          "10/4/2026",
+          "View Trends"
+        ]
+      ],
+      "rowCount": 5
+    }
+  ],
+  "inputs": [
+    {
+      "placeholder": "Search patients, ID, risk band...",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "placeholder": "Search by patient name, code, notes, or priority...",
+      "value": "",
+      "type": "text"
+    }
+  ],
+  "bodyText": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 70 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 11/6/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% High Cognitive Risk 8/1/2026 View Trends P008 ID: 001 55 / F 86.95% High Cognitive Risk 7/25/2026 View Trends Previous 1 2 3 4 5 6 Next Upcoming Follow-Ups Add 5 overdue (>90 days) POO1 Last: 8/1/2026 · 81 yrs Schedule P008 Last: 7/25/2026 · 55 yrs Schedule Test Never screened · 46 yrs Schedule Test 2 Never screened · 56 yrs Schedule test 3ca Never screened · 45 yrs Schedule Search Follow-Ups Date Range All Time Patient All Patients test Jun 02, 2026 routine P002 Jun 04, 2026 routine 003 Jun 10, 2026 moderate Age Distribution & Insights 27 patients"
+}

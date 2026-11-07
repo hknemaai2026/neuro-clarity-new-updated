@@ -1,0 +1,648 @@
+[
+  {
+    "label": "01_dashboard",
+    "url": "https://protest.nemaai.com/",
+    "pathname": "/",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups",
+      "Age Distribution & Insights"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "Add",
+      "5 overdue (>90 days)",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "Schedule",
+      "All Time",
+      "All Patients",
+      "Age Distribution & Insights 27 patients"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "tables": [
+      {
+        "th": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": "",
+        "value": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 18 18 high-risk cases found Avg Patient Age 42 yrs Across 27 patients Credits Remaining 71 Valid until 3/3/2030 Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% High Cognitive Risk 8/1/2026 View Trends P008 ID: 001 55 / F 86.95% High Cognitive Risk 7/25/2026 View Trends Previous 1 2 3 4 5 6 Next Upcoming Follow-Ups Add 5 overdue (>90 days) POO1 Last: 8/1/2026 · 81 yrs Schedule P008 Last: 7/25/2026 · 55 yrs Schedule Test Never screened · 46 yrs Schedule Test 2 Never screened · 56 yrs Schedule test 3ca Never screened · 45 yrs Schedule Search Follow-Ups Date Range All Time Patient All Patients test Jun 02, 2026 routine P002 Jun 04, 2026 ro"
+  },
+  {
+    "label": "02_eeg_insights",
+    "url": "https://protest.nemaai.com/upload",
+    "pathname": "/upload",
+    "h1": [
+      "New EEG Screening"
+    ],
+    "h2": [
+      "Select Screening Module"
+    ],
+    "h3": [
+      "EEG Cognitive Screening",
+      "EEG Technician Report",
+      "EEG Signal Analysis"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Continue"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      }
+    ],
+    "tables": [],
+    "inputs": [],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. New EEG Screening Complete all steps to generate a clinical report Step 1 of 6 Module Patient Details Medications Upload EEG Quality Select Screening Module Choose the analysis pipeline before adding patient details EEG Cognitive Screening CognEEG-powered brain health report. Identifies early cognitive risk, brain fog indicators, and dementia biomarkers from the EEG signal. EEG Technician Report Standard EEG reading and signal analysis. Suitable for routine neurological reviews, documentation, and technician sign-off. EEG Signal Analysis Deep signal-level EEG analysis. Reviews waveform patterns, sleep stages, and spectral markers for detailed neurological insight. Continue"
+  },
+  {
+    "label": "04_patients_directory",
+    "url": "https://protest.nemaai.com/patients",
+    "pathname": "/patients",
+    "h1": [
+      "Patient Directory"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Export Excel",
+      "Add Patient"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Patient Directory",
+        "href": "/patients"
+      },
+      {
+        "text": "Patient Reports",
+        "href": "/reports"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      }
+    ],
+    "tables": [],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by name or patient ID...",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Patient Directory Patient Reports Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Patient Directory 27 patients registered Export Excel Add Patient T test P011 23 yrs · Female Moderate Cognitive Risk S sub-01 Test1 65 yrs · Male Moderate Cognitive Risk T test P0011 24 yrs · Male High Cognitive Risk P POO1 TEST101 81 yrs · Female High Cognitive Risk P P008 001 55 yrs · Female High Cognitive Risk T test 21 56 yrs · Female Elevated Cognitive Risk R RUDRA PRATAP XYZ 40 yrs · Male High Cognitive Risk T Test xyz 46 yrs · Male T Test 2 XYZR 56 yrs · Male T TEST 3C XYZRU 45 yrs · Male Elevated Cognitive Risk T test 3ca 123456 45 yrs · Female T TEST 4C 1234556 56 yrs · Female High Cognitive Risk S Sachin_Youth 002 26 yrs · Male Elevated Cognitive Risk S Sambhavi_nema 0003 27 yrs · Female Low Cognitive Risk A Alankrita 004 29 yrs · Female High Cognitive Risk M Mansavi 005 25 yrs · Female High Cognitive Risk B Bharath_alank 006 29 yrs · Male High Cognitive Risk R Raj Soin 009 79 yrs · Male High Cognitive Risk I Indu Soin 0010 74 yrs · Female High Cognitive Risk K Karthik 008 27 yrs · Male High Cognitive Risk K Keval_iltrahuman 011 30 yrs · Male High Cognitive Risk A Aikansh 012 29 yrs · Male High Cognitive Risk A Ajinkye 201 35 yrs · Male Hig"
+  },
+  {
+    "label": "05_patient_reports",
+    "url": "https://protest.nemaai.com/reports",
+    "pathname": "/reports",
+    "h1": [],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Add Patient",
+      "Choose a date range",
+      "Reset",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends",
+      "View",
+      "Trends"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Patient Directory",
+        "href": "/patients"
+      },
+      {
+        "text": "Patient Reports",
+        "href": "/reports"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Previous",
+        "href": null
+      },
+      {
+        "text": "1",
+        "href": null
+      },
+      {
+        "text": "2",
+        "href": null
+      },
+      {
+        "text": "3",
+        "href": null
+      },
+      {
+        "text": "4",
+        "href": null
+      },
+      {
+        "text": "5",
+        "href": null
+      },
+      {
+        "text": "6",
+        "href": null
+      },
+      {
+        "text": "Next",
+        "href": null
+      }
+    ],
+    "tables": [
+      {
+        "th": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 5
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Patient Directory Patient Reports Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Add Patient Showing 5 of 27 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions test ID: P011 23 / F 48.67% Moderate Cognitive Risk 10/27/2026 View Trends sub-01 ID: Test1 65 / M 48.67% Moderate Cognitive Risk 10/16/2026 View Trends test ID: P0011 24 / M 74.66% High Cognitive Risk 10/4/2026 View Trends POO1 ID: TEST101 81 / F 98.17% High Cognitive Risk 8/1/2026 View Trends P008 ID: 001 55 / F 86.95% High Cognitive Risk 7/25/2026 View Trends Previous 1 2 3 4 5 6 Next"
+  },
+  {
+    "label": "06_neuro_intake",
+    "url": "https://protest.nemaai.com/neuro-intake",
+    "pathname": "/neuro-intake",
+    "h1": [],
+    "h2": [],
+    "h3": [
+      "WHO IS FILLING THIS FORM?"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Continue"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      }
+    ],
+    "tables": [],
+    "inputs": [],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Neuro Patient Intake — Cognitive, Sleep & Headache Screening WHO IS FILLING THIS FORM? 🧑 I am the Patient Self-fill on tablet or phone 🩺 Staff / Technician Entering on patient's behalf Continue What this does: This intake collects symptom history and runs validated screening tools for cognitive decline, sleep disorders, and headache. Results go directly to the neurologist before your consultation. Takes approximately 8–12 minutes."
+  },
+  {
+    "label": "07_longitudinal",
+    "url": "https://protest.nemaai.com/longitudinal",
+    "pathname": "/longitudinal",
+    "h1": [],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Select patient"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      }
+    ],
+    "tables": [],
+    "inputs": [],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Select patient No Patient Selected Please select a patient from the dropdown above"
+  },
+  {
+    "label": "08_model_evidence",
+    "url": "https://protest.nemaai.com/evidence",
+    "pathname": "/evidence",
+    "h1": [
+      "Model Evidence & Validation"
+    ],
+    "h2": [
+      "How CognEEG Works",
+      "Training Dataset",
+      "Validation Study Results",
+      "Population Suitability",
+      "Known Limitations",
+      "Regulatory & Compliance"
+    ],
+    "h3": [
+      "All India Institute of Medical Sciences (AIIMS), New Delhi",
+      "How CognEEG Works NEMA AI's core analysis engine",
+      "Training Dataset Data sources and population coverage",
+      "Validation Study Results CognEEG model performance metrics",
+      "Population Suitability Intended use and patient criteria",
+      "Known Limitations Important considerations for clinical use",
+      "Regulatory & Compliance Certifications, data privacy, and standards"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "How CognEEG Works NEMA AI's core analysis engine",
+      "Training Dataset Data sources and population coverage",
+      "Validation Study Results CognEEG model performance metrics",
+      "Population Suitability Intended use and patient criteria",
+      "Known Limitations Important considerations for clinical use",
+      "Regulatory & Compliance Certifications, data privacy, and standards"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      }
+    ],
+    "tables": [],
+    "inputs": [],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. NEMA AI Model Evidence & Validation Scientific foundation and clinical validation of the CognEEG engine — NEMA AI's core model for non-invasive cognitive and neurological EEG screening. India-Validated Cohort DPDP & HIPAA Aligned CDSCO Registration (In Progress) NIMHANS Report Format RESEARCH PARTNER All India Institute of Medical Sciences (AIIMS), New Delhi NEMA AI's model validation and clinical research is conducted in collaboration with AIIMS Delhi — India's foremost medical institution — ensuring the CognEEG engine meets the highest standards of clinical rigour for the Indian population. CognEEG Pipeline AI-driven cognitive risk scoring, brain age estimation, and dementia biomarker detection. Technician Report Structured NIMHANS-format EEG documentation with automated signal findings and PDF output. EEG Signal Analysis Deep waveform inspection — sleep staging, spectral markers, and channel-level quality grading. How CognEEG Works NEMA AI's core analysis engine Training Dataset Data sources and population coverage Validation Study Results CognEEG model performance metrics Population Suitability Intended use and patient criteria Known Limitations Important considerations for clinical use Regulatory & Compliance Certifications, "
+  },
+  {
+    "label": "09_settings",
+    "url": "https://protest.nemaai.com/settings",
+    "pathname": "/settings",
+    "h1": [
+      "Settings"
+    ],
+    "h2": [
+      "Doctor Information",
+      "Change Password"
+    ],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Profile",
+      "Integration",
+      "Export",
+      "Privacy",
+      "Roles",
+      "Neurology",
+      "Save Profile",
+      "Update Password"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      }
+    ],
+    "tables": [],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Dr. Your Name",
+        "name": "",
+        "id": "doctorName",
+        "value": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "email",
+        "placeholder": "",
+        "name": "",
+        "id": "email",
+        "value": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Your Hospital Name",
+        "name": "",
+        "id": "hospital",
+        "value": "Test Hospital"
+      },
+      {
+        "tag": "INPUT",
+        "type": "password",
+        "placeholder": "••••••••",
+        "name": "",
+        "id": "",
+        "value": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "password",
+        "placeholder": "Min. 8 characters",
+        "name": "",
+        "id": "",
+        "value": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "password",
+        "placeholder": "Repeat new password",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Settings Manage your account, integrations, and preferences Profile Integration Export Privacy Roles Doctor Information Your professional details shown on reports Full Name Email Email is tied to your account and cannot be changed here. Specialty Neurology Hospital / Clinic Name Save Profile Change Password Update your login credentials Current Password New Password Confirm New Password Update Password"
+  },
+  {
+    "label": "10_admin_keys_gate",
+    "url": "https://protest.nemaai.com/admin-keys",
+    "pathname": "/admin-keys",
+    "h1": [
+      "NEMA Admin"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "Access Admin Panel"
+    ],
+    "links": [],
+    "tables": [],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "password",
+        "placeholder": "Enter admin secret",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "NEMA Admin Invite key & account management Admin Secret Access Admin Panel"
+  }
+]

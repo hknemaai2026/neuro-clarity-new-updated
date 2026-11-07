@@ -1,0 +1,90 @@
+3
+Test Hospital
+Clinician
+Dashboard
+EEG Insights
+Patients
+Neuro Intake
+Longitudinal
+Model Evidence
+Settings
+
+This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals.
+
+Findings & Summary
+Cognitive Analysis
+Age Normative Context
+Brain States
+Insights & Activities
+My Plan
+
+NEMA AI · COGNEEG
+
+EEG Cognitive Neurophysiology Report
+
+Research partner: AIIMS New Delhi  |  For clinical decision support only
+
+Patient: sub-01
+
+Age / Gender: 65 yrs / M
+
+Patient ID: —
+
+Report Date: 07 Nov 2026
+
+IMPRESSION
+
+EEG-based neurophysiological analysis was performed for sub-01, 65 years / M. The following findings were noted on analysis of the resting-state EEG signal:
+
+Moderate Cognitive Risk
+
+BIOMARKERS ASSESSED
+
+11
+
+FLAGGED FINDINGS
+
+4 of 11
+
+EEG BIOMARKER PANEL
+
+Organised by brain region · Primary markers listed first within each region
+
+POSTERIOR / OCCIPITAL
+Alpha rhythm origin — resting-state oscillation, visual-cortex coherence
+Biomarker	Value	Reference	Status	Clinical Significance
+
+
+Alpha Peak Frequency
+
+The dominant occipital alpha rhythm frequency. Healthy young-adult peak ~10 Hz. Slows with age-related cognitive decline.
+
+	11.036	9.5 – 11.0 Hz	
+Normal	Alpha peak within healthy range
+
+
+Posterior Dominance Index
+
+Strength and stability of the posterior alpha rhythm, the brain’s dominant resting-state oscillation.
+
+	8.812	≥ 1.0 (higher = healthier)	
+Normal	Healthy resting brain rhythm — strong posterior alpha dominance
+
+
+Occipital Signal Entropy
+
+Regularity of occipital EEG. Low entropy = organised, high entropy = irregular cortical activity.
+
+	2.054	< 3.0 (lower = more organised)	
+Normal	Mild irregularity detected
+
+
+Anterior-Posterior Alpha Balance
+
+Ratio of occipital-to-frontal alpha power. Healthy brains show strong posterior alpha dominance at rest.
+
+	0.38	> 0.1 (positive = healthy posterior dominance)	
+Normal	Balanced brain rhythm pattern
+FRONTAL
+Executive function, attention, prefrontal circuits, processing speed
+Bio

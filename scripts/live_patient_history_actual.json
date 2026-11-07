@@ -1,0 +1,422 @@
+{
+  "url": "https://protest.nemaai.com/patient-history/UDAxMQ==",
+  "pathname": "/patient-history/UDAxMQ==",
+  "title": "NEMA AI - EEG Dementia Screening Dashboard",
+  "h1": [
+    "Patient History"
+  ],
+  "h2": [],
+  "h3": [
+    "Screening Records"
+  ],
+  "buttons": [
+    {
+      "text": "3",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10 relative"
+    },
+    {
+      "text": "Test Hospital Clinician",
+      "className": "justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 py-2 flex items-center gap-2 px-3"
+    },
+    {
+      "text": "Patients",
+      "className": "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all text-sidebar-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-accent-foreground"
+    },
+    {
+      "text": "Back to Patients",
+      "className": "justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 flex items-center gap-2 self-start"
+    },
+    {
+      "text": "Export Excel",
+      "className": "justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 flex items-center gap-2 self-start sm:self-auto"
+    },
+    {
+      "text": "Choose date range",
+      "className": "whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 flex w-full items-center justify-between gap-2 px-3 py-2 text-sm text-foreground"
+    },
+    {
+      "text": "Reset",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+    }
+  ],
+  "badges": [
+    {
+      "text": "3",
+      "className": "absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-risk-high text-[10px] font-bold text-primary-foreground"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "48.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "55%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "48.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "55%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "48.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "55%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Low Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-low/30 bg-risk-low-bg text-risk-low font-medium"
+    },
+    {
+      "text": "14.1%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-low/30 bg-risk-low-bg text-risk-low font-semibold"
+    },
+    {
+      "text": "84%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "48.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "55%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "48.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "55%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "61.6%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "77%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "41.4%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "90%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "41.4%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "90%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "48.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "55%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-medium"
+    },
+    {
+      "text": "74.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-semibold"
+    },
+    {
+      "text": "86%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-medium"
+    },
+    {
+      "text": "48.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-moderate/30 bg-risk-moderate-bg text-risk-moderate font-semibold"
+    },
+    {
+      "text": "55%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "61.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "77%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "61.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "77%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "61.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "77%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "61.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "77%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "52.1%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "59%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "55.0%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "63%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "61.7%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "77%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "53.4%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "55%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium"
+    },
+    {
+      "text": "51.2%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold"
+    },
+    {
+      "text": "69%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-fair/30 bg-risk-moderate-bg text-quality-fair font-semibold"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-medium"
+    },
+    {
+      "text": "79.5%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-semibold"
+    },
+    {
+      "text": "87%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-medium"
+    },
+    {
+      "text": "92.9%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-semibold"
+    },
+    {
+      "text": "80%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-medium"
+    },
+    {
+      "text": "77.8%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-high/30 bg-risk-high-bg text-risk-high font-semibold"
+    },
+    {
+      "text": "80%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    },
+    {
+      "text": "Low Cognitive Risk",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-low/30 bg-risk-low-bg text-risk-low font-medium"
+    },
+    {
+      "text": "14.1%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-risk-low/30 bg-risk-low-bg text-risk-low font-semibold"
+    },
+    {
+      "text": "84%",
+      "className": "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-quality-good/30 bg-risk-low-bg text-quality-good font-semibold"
+    }
+  ],
+  "table": [
+    {
+      "th": [
+        "S.No.",
+        "Date",
+        "Risk Score",
+        "Risk Level",
+        "PDR (Hz)",
+        "CDI",
+        "Quality",
+        "Prescription",
+        "Actions"
+      ],
+      "trCount": 25,
+      "rows": [
+        [
+          "1",
+          "06 Nov 2026, 05:08",
+          "Moderate Cognitive Risk",
+          "48.7%",
+          "—",
+          "—",
+          "55%",
+          "N/A",
+          ""
+        ],
+        [
+          "2",
+          "27 Oct 2026, 07:49",
+          "Moderate Cognitive Risk",
+          "48.7%",
+          "—",
+          "—",
+          "55%",
+          "N/A",
+          ""
+        ],
+        [
+          "3",
+          "26 Oct 2026, 06:15",
+          "Moderate Cognitive Risk",
+          "48.7%",
+          "—",
+          "—",
+          "55%",
+          "N/A",
+          ""
+        ],
+        [
+          "4",
+          "26 Oct 2026, 05:38",
+          "Low Cognitive Risk",
+          "14.1%",
+          "—",
+          "—",
+          "84%",
+          "N/A",
+          ""
+        ],
+        [
+          "5",
+          "22 Oct 2026, 12:58",
+          "Moderate Cognitive Risk",
+          "48.7%",
+          "—",
+          "—",
+          "55%",
+          "N/A",
+          ""
+        ]
+      ]
+    }
+  ],
+  "bodySnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Back to Patients Export Excel Patient History Patient: test · Code: P011 Screening Records Complete history of patient screenings and results. Review patient screening summaries, risk metrics, and report access in one clean view.(25 records) Expand any row for full report details Showing 8 of 25 records Record date range Choose date range Reset S.No. Date Risk Score Risk Level PDR (Hz) CDI Quality Prescription Actions 1 06 Nov 2026, 05:08 Moderate Cognitive Risk 48.7% — — 55% N/A 2 27 Oct 2026, 07:49 Moderate Cognitive Risk 48.7% — — 55% N/A 3 26 Oct 2026, 06:15 Moderate Cognitive Risk 48.7% — — 55% N/A 4 26 Oct 2026, 05:38 Low Cognitive Risk 14.1% — — 84% N/A 5 22 Oct 2026, 12:58 Moderate Cognitive Risk 48.7% — — 55% N/A 6 19 Oct 2026, 11:57 Moderate Cognitive Risk 48.7% — — 55% N/A 7 16 Oct 2026, 07:58 Elevated Cognitive Risk 61.6% — — 77% N/A 8 16 Oct 2026, 07:32 Moderate Cognitive Risk 41.4% — — 90% N/A 9 16 Oct 2026, 05:14 Moderate Cognitive Risk 41.4% — — 90% N/A 10 15 Oct 2026, 12:41 Moderate Cognitive Risk 48.7% — — 55% N/A 11 04 Oct 2026, 12:41 High Cognitive Risk 74.7% — — 86% N/A 12 30 Sept 2026, 10:21 Moderate Cognitive Risk 48.7% — — 55% N/A 13 21 Sept 2026, 11:07 Elevated Cognitive Risk 61.7% — — 77% N/A 14 21 Sept 2026, 10:56 Elevated Cognitive Risk 61.7% — — 77% N/A 15 10 Sept 2026, 05:53 Elevated Cognitive Risk 61.7% — — 77% N/A 16 09 Sept 2026, 14:59 Elevated Cognitive Risk 61.7% — — 77% N/A 17 20 Aug 2026, 09:15 Elevated Cognitive Risk 52.1% — — 59% N/A 18 20 Aug 2026, 09:11 Elevated Cognitive Risk 55.0% — — 63% N/A 19 18 Aug 2026, 14:43 Elevated Cognitive Risk 61.7% — — 77% N/A 20 18 Aug 2026, 14:24 Elevated Cognitive Risk 53.4% — — 55% N/A 21 11 Aug 2026, 06:32 Elevated Cognitive Risk 51.2% — — 69% N/A 22 01 Aug 2026, 04:51 High Cognitive Risk 79.5% — — 87% N/A 23 21 Jul 2026, 17:48 High Cognitive Risk 92.9% — — 80% N/A 24 21 Jul 2026, 17:40 High Cognitive Risk 77.8% — — 80% N/A 25 19 Jul 2026, 16:55 Low Cognitive Risk 14.1% — — 84% N/A Previous 1 2 3 4 Next"
+}

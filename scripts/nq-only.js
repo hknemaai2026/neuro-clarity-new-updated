@@ -1,0 +1,1 @@
+const Nq=({embedded:e=!1,embeddedResultId:t}

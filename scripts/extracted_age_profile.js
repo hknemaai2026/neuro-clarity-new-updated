@@ -1,0 +1,1 @@
+S==="age_profile"&&me&&(P||C||(M(!0),D(null),ir(`${Pt}/age-profile/${encodeURIComponent(String(me))}`).then(async Be=>{const ze=await Be.json();Be.ok?L(ze):D((ze==null?void 0:ze.error)||"Failed to load age profile.")}).catch(()=>D("Network error — could not load age profile.")).finally(()=>M(!1))))},[S,me]),j.useEffect(()=>{

@@ -1,0 +1,276 @@
+{
+  "url": "https://protest.nemaai.com/patients",
+  "pathname": "/patients",
+  "title": "NEMA AI - EEG Dementia Screening Dashboard",
+  "h1": [
+    "Patient Directory"
+  ],
+  "h2": [],
+  "h3": [],
+  "buttons": [
+    {
+      "text": "3",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10 relative"
+    },
+    {
+      "text": "Test Hospital Clinician",
+      "className": "justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 py-2 flex items-center gap-2 px-3"
+    },
+    {
+      "text": "Patients",
+      "className": "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all bg-sidebar-accent text-sidebar-accent-foreground"
+    },
+    {
+      "text": "Export Excel",
+      "className": "justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex items-center gap-2"
+    },
+    {
+      "text": "Add Patient",
+      "className": "justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 flex items-center gap-2"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "text",
+      "placeholder": "Search by name or patient ID...",
+      "name": "",
+      "id": "",
+      "className": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm pl-9"
+    }
+  ],
+  "labels": [],
+  "badges": [
+    {
+      "text": "3",
+      "className": "absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-risk-high text-[10px] font-bold text-primary-foreground"
+    },
+    {
+      "text": "T",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-violet-100 text-violet-700"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700"
+    },
+    {
+      "text": "S",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-teal-100 text-teal-700"
+    },
+    {
+      "text": "Moderate Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700"
+    },
+    {
+      "text": "T",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-violet-100 text-violet-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "P",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-violet-100 text-violet-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "P",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-violet-100 text-violet-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "T",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-violet-100 text-violet-700"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700"
+    },
+    {
+      "text": "R",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-rose-100 text-rose-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "T",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-blue-100 text-blue-700"
+    },
+    {
+      "text": "T",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-blue-100 text-blue-700"
+    },
+    {
+      "text": "T",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-blue-100 text-blue-700"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700"
+    },
+    {
+      "text": "T",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-violet-100 text-violet-700"
+    },
+    {
+      "text": "T",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-blue-100 text-blue-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "S",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-green-100 text-green-700"
+    },
+    {
+      "text": "Elevated Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700"
+    },
+    {
+      "text": "S",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-green-100 text-green-700"
+    },
+    {
+      "text": "Low Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700"
+    },
+    {
+      "text": "A",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-green-100 text-green-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "M",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-green-100 text-green-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "B",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-blue-100 text-blue-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "R",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-rose-100 text-rose-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "I",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-teal-100 text-teal-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "K",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-orange-100 text-orange-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "K",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-orange-100 text-orange-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "A",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-green-100 text-green-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "A",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-green-100 text-green-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "B",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-blue-100 text-blue-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "B",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-blue-100 text-blue-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "S",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-green-100 text-green-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    },
+    {
+      "text": "N",
+      "className": "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold bg-blue-100 text-blue-700"
+    },
+    {
+      "text": "High Cognitive Risk",
+      "className": "inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700"
+    }
+  ],
+  "cards": [
+    {
+      "text": "T test P011 23 yrs · Female Moderate Cognitive Risk",
+      "classes": "rounded-xl border border-border bg-card shadow-sm hover:shadow-md transition-shadow"
+    },
+    {
+      "text": "S sub-01 Test1 65 yrs · Male Moderate Cognitive Risk",
+      "classes": "rounded-xl border border-border bg-card shadow-sm hover:shadow-md transition-shadow"
+    },
+    {
+      "text": "T test P0011 24 yrs · Male High Cognitive Risk",
+      "classes": "rounded-xl border border-border bg-card shadow-sm hover:shadow-md transition-shadow"
+    },
+    {
+      "text": "P POO1 TEST101 81 yrs · Female High Cognitive Risk",
+      "classes": "rounded-xl border border-border bg-card shadow-sm hover:shadow-md transition-shadow"
+    },
+    {
+      "text": "P P008 001 55 yrs · Female High Cognitive Risk",
+      "classes": "rounded-xl border border-border bg-card shadow-sm hover:shadow-md transition-shadow"
+    }
+  ],
+  "cardsCount": 27,
+  "bodySnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Patient Directory Patient Reports Neuro Intake Longitudinal Model Evidence Settings This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Patient Directory 27 patients registered Export Excel Add Patient T test P011 23 yrs · Female Moderate Cognitive Risk S sub-01 Test1 65 yrs · Male Moderate Cognitive Risk T test P0011 24 yrs · Male High Cognitive Risk P POO1 TEST101 81 yrs · Female High Cognitive Risk P P008 001 55 yrs · Female High Cognitive Risk T test 21 56 yrs · Female Elevated Cognitive Risk R RUDRA PRATAP XYZ 40 yrs · Male High Cognitive Risk T Test xyz 46 yrs · Male T Test 2 XYZR 56 yrs · Male T TEST 3C XYZRU 45 yrs · Male Elevated Cognitive Risk T test 3ca 123456 45 yrs · Female T TEST 4C 1234556 56 yrs · Female High Cognitive Risk S Sachin_Youth 002 26 yrs · Male Elevated Cognitive Risk S Sambhavi_nema 0003 27 yrs · Female Low Cognitive Risk A Alankrita 004 29 yrs · Female High Cognitive Risk M Mansavi 005 25 yrs · Female High Cognitive Risk B Bharath_alank 006 29 yrs · Male High Cognitive Risk R Raj Soin 009 79 yrs · Male High Cognitive Risk I Indu Soin 0010 74 yrs · Female High Cognitive Risk K Karthik 008 27 yrs · Male High Cognitive Risk K Keval_iltrahuman 011 30 yrs · Male High Cognitive Risk A Aikansh 012 29 yrs · Male High Cognitive Risk A Ajinkye 201 35 yrs · Male High Cognitive Risk B Biman Ultra 202 40 yrs · Male High Cognitive Risk B Biman_ultra 013 33 yrs · Male High Cognitive Risk S Swari_anurag 014 29 yrs · Female High Cognitive Risk N Nisha 0014 33 yrs · Female High Cognitive Risk"
+}

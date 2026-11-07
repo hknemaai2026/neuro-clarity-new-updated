@@ -1,0 +1,208 @@
+{
+  "allButtons": [
+    {
+      "text": "3",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10 relative",
+      "disabled": false
+    },
+    {
+      "text": "Test Hospital\nClinician",
+      "className": "justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 py-2 flex items-center gap-2 px-3",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "className": "grid h-8 w-8 place-items-center rounded-lg text-sidebar-foreground transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+      "disabled": false
+    },
+    {
+      "text": "Patients",
+      "className": "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all text-sidebar-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-accent-foreground",
+      "disabled": false
+    },
+    {
+      "text": "Findings & Summary",
+      "className": "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 text-muted-foreground hover:bg-background/60 hover:text-foreground",
+      "disabled": false
+    },
+    {
+      "text": "Cognitive Analysis",
+      "className": "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 bg-background text-foreground shadow-md",
+      "disabled": false
+    },
+    {
+      "text": "Age Normative Context",
+      "className": "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 text-muted-foreground hover:bg-background/60 hover:text-foreground",
+      "disabled": false
+    },
+    {
+      "text": "Brain States",
+      "className": "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 text-muted-foreground hover:bg-background/60 hover:text-foreground",
+      "disabled": false
+    },
+    {
+      "text": "Insights & Activities",
+      "className": "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 text-muted-foreground hover:bg-background/60 hover:text-foreground",
+      "disabled": false
+    },
+    {
+      "text": "My Plan",
+      "className": "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 text-muted-foreground hover:bg-background/60 hover:text-foreground",
+      "disabled": false
+    },
+    {
+      "text": "Full Detail",
+      "className": "inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md px-3 gap-1 text-xs h-7",
+      "disabled": false
+    },
+    {
+      "text": "Download",
+      "className": "inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md px-3 gap-1 text-xs h-7",
+      "disabled": false
+    },
+    {
+      "text": "Save Report as PDF",
+      "className": "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2",
+      "disabled": false
+    },
+    {
+      "text": "Download Patient Copy",
+      "className": "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background hover:text-accent-foreground h-10 px-4 py-2 gap-2 border-emerald-300 text-emerald-700 hover:bg-emerald-50",
+      "disabled": false
+    },
+    {
+      "text": "Download CSV for EMR",
+      "className": "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2",
+      "disabled": false
+    },
+    {
+      "text": "Download PDF for EMR",
+      "className": "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2",
+      "disabled": false
+    },
+    {
+      "text": "Download Summary Card (PNG)",
+      "className": "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2",
+      "disabled": false
+    },
+    {
+      "text": "Send to Referring Doctor",
+      "className": "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full p-[15px] w-16 h-16 shadow-2xl bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 hover:scale-110 transition-all duration-300 border-2 border-white/30 backdrop-blur-md relative overflow-hidden group",
+      "disabled": false
+    }
+  ],
+  "allHeadings": [
+    {
+      "tag": "H1",
+      "text": "EEG Cognitive Neurophysiology Report",
+      "className": "text-lg font-bold text-foreground mt-0.5"
+    },
+    {
+      "tag": "H2",
+      "text": "IMPRESSION",
+      "className": "text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3"
+    },
+    {
+      "tag": "H2",
+      "text": "EEG BIOMARKER PANEL",
+      "className": "text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1"
+    },
+    {
+      "tag": "H2",
+      "text": "CLINICAL OBSERVATIONS & RECOMMENDED CORRELATIONS",
+      "className": "text-xs font-bold uppercase tracking-widest text-muted-foreground"
+    },
+    {
+      "tag": "H2",
+      "text": "PROBABLE RISK OF COGNITIVE DECLINE",
+      "className": "text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3"
+    }
+  ],
+  "svgs": [
+    {
+      "classes": "lucide lucide-bell h-5 w-5 text-muted-foreground",
+      "parent": "BUTTON: 3"
+    },
+    {
+      "classes": "lucide lucide-user h-4 w-4 text-primary",
+      "parent": "DIV: "
+    },
+    {
+      "classes": "lucide lucide-x h-4 w-4",
+      "parent": "BUTTON: "
+    },
+    {
+      "classes": "lucide lucide-layout-dashboard h-5 w-5",
+      "parent": "A: Dashboard"
+    },
+    {
+      "classes": "lucide lucide-zap h-5 w-5",
+      "parent": "A: EEG Insights"
+    },
+    {
+      "classes": "lucide lucide-users h-5 w-5",
+      "parent": "BUTTON: Patients"
+    },
+    {
+      "classes": "lucide lucide-chevron-down ml-auto h-4 w-4 transition-transform",
+      "parent": "BUTTON: Patients"
+    },
+    {
+      "classes": "lucide lucide-brain h-5 w-5",
+      "parent": "A: Neuro Intake"
+    },
+    {
+      "classes": "lucide lucide-trending-up h-5 w-5",
+      "parent": "A: Longitudinal"
+    },
+    {
+      "classes": "lucide lucide-shield h-5 w-5",
+      "parent": "A: Model Evidence"
+    },
+    {
+      "classes": "lucide lucide-settings h-5 w-5",
+      "parent": "A: Settings"
+    },
+    {
+      "classes": "lucide lucide-eye h-3 w-3",
+      "parent": "BUTTON: Full Detail"
+    },
+    {
+      "classes": "lucide lucide-download h-3 w-3",
+      "parent": "BUTTON: Download"
+    },
+    {
+      "classes": "lucide lucide-download h-4 w-4",
+      "parent": "BUTTON: Save Report as PDF"
+    },
+    {
+      "classes": "lucide lucide-printer h-4 w-4",
+      "parent": "BUTTON: Download Patient Copy"
+    },
+    {
+      "classes": "lucide lucide-download h-4 w-4",
+      "parent": "BUTTON: Download CSV for EMR"
+    },
+    {
+      "classes": "lucide lucide-download h-4 w-4",
+      "parent": "BUTTON: Download PDF for EMR"
+    },
+    {
+      "classes": "lucide lucide-download h-4 w-4",
+      "parent": "BUTTON: Download Summary Card (PNG)"
+    },
+    {
+      "classes": "lucide lucide-mail h-4 w-4",
+      "parent": "BUTTON: Send to Referring Doctor"
+    }
+  ],
+  "badges": [
+    "3"
+  ],
+  "mainContentTextLength": 5558
+}

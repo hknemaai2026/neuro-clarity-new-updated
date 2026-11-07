@@ -1,0 +1,701 @@
+[
+  {
+    "label": "01_dashboard",
+    "url": "http://localhost:4173/",
+    "pathname": "/",
+    "h1": [
+      "Dashboard"
+    ],
+    "h2": [],
+    "h3": [
+      "Patient Screening Summary",
+      "Upcoming Follow-Ups"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Choose a date range",
+      "Reset",
+      "Add",
+      "All Time",
+      "All Patients"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [
+      {
+        "th": [
+          "Patient Name",
+          "Age / Sex",
+          "Risk Percentage",
+          "Risk Level",
+          "Last Screening",
+          "Actions"
+        ],
+        "rowCount": 1
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients, ID, risk band...",
+        "name": "",
+        "id": "",
+        "value": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name, code, notes, or priority...",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Dashboard Overview of today's screenings and patient risk assessments Today's Screens 0 No screenings today High-Risk Detected 0 No high-risk cases Avg Patient Age — Across 0 patients Credits Remaining — Active plan Patient Screening Summary Overview of patient risk and screening status with quick access to history and trends. Showing 0 of 0 patients Screening date range Choose a date range Reset Patient Name Age / Sex Risk Percentage Risk Level Last Screening Actions No matching patients found. Upcoming Follow-Ups Add Search Follow-Ups Date Range All Time Patient All Patients No follow-ups found"
+  },
+  {
+    "label": "02_eeg_insights",
+    "url": "http://localhost:4173/upload",
+    "pathname": "/upload",
+    "h1": [
+      "New EEG Screening"
+    ],
+    "h2": [
+      "Select Screening Module"
+    ],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "EEG Cognitive Screening CognEEG-powered brain health report. Identifies early cognitive risk, brain fog indicators, and dementia biomarkers from the EEG signal.",
+      "EEG Technician Report Standard EEG reading and signal analysis. Suitable for routine neurological reviews, documentation, and technician sign-off.",
+      "EEG Signal Analysis Deep signal-level EEG analysis. Reviews waveform patterns, sleep stages, and spectral markers for detailed neurological insight.",
+      "Continue"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [],
+    "inputs": [],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. New EEG Screening Complete all steps to generate a clinical report Step 1 of 6 Module Patient Details Medications Upload EEG Quality Select Screening Module Choose the analysis pipeline before adding patient details EEG Cognitive Screening CognEEG-powered brain health report. Identifies early cognitive risk, brain fog indicators, and dementia biomarkers from the EEG signal. EEG Technician Report Standard EEG reading and signal analysis. Suitable for routine neurological reviews, documentation, and technician sign-off. EEG Signal Analysis Deep signal-level EEG analysis. Reviews waveform patterns, sleep stages, and spectral markers for detailed neurological insight. Continue"
+  },
+  {
+    "label": "04_patients_directory",
+    "url": "http://localhost:4173/patients",
+    "pathname": "/patients",
+    "h1": [
+      "Patient Directory"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Add Patient"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Patient Directory",
+        "href": "/patients"
+      },
+      {
+        "text": "Patient Reports",
+        "href": "/reports"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search patients...",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "Failed to load patients 3 Test Hospital Clinician Dashboard EEG Insights Patients Patient Directory Patient Reports Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Patient Directory 0 patients registered Add Patient No patients found"
+  },
+  {
+    "label": "05_patient_reports",
+    "url": "http://localhost:4173/reports",
+    "pathname": "/reports",
+    "h1": [
+      "Patient Reports"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "All Levels"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Patient Directory",
+        "href": "/patients"
+      },
+      {
+        "text": "Patient Reports",
+        "href": "/reports"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [
+      {
+        "th": [
+          "Patient",
+          "Age/Sex",
+          "Screening Date",
+          "Risk Level",
+          "Probability",
+          "Brain Age",
+          "Quality",
+          "Actions"
+        ],
+        "rowCount": 1
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search by patient name or ID...",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "Failed to load patients 3 Test Hospital Clinician Dashboard EEG Insights Patients Patient Directory Patient Reports Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Patient Reports View and manage all screening reports All Levels Patient Age/Sex Screening Date Risk Level Probability Brain Age Quality Actions No reports are available at the moment. Please check back later. Showing 0 of 0 reports"
+  },
+  {
+    "label": "06_neuro_intake",
+    "url": "http://localhost:4173/neuro-intake",
+    "pathname": "/neuro-intake",
+    "h1": [],
+    "h2": [],
+    "h3": [
+      "WHO IS FILLING THIS FORM?"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Continue"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [],
+    "inputs": [],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Neuro Patient Intake — Cognitive, Sleep & Headache Screening WHO IS FILLING THIS FORM? 🧑 I am the Patient Self-fill on tablet or phone 🩺 Staff / Technician Entering on patient's behalf Continue What this does: This intake collects symptom history and runs validated screening tools for cognitive decline, sleep disorders, and headache. Results go directly to the neurologist before your consultation. Takes approximately 8–12 minutes."
+  },
+  {
+    "label": "07_longitudinal",
+    "url": "http://localhost:4173/longitudinal",
+    "pathname": "/longitudinal",
+    "h1": [],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Select patient"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [],
+    "inputs": [],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Select patient No Patient Selected Please select a patient from the dropdown above"
+  },
+  {
+    "label": "08_model_evidence",
+    "url": "http://localhost:4173/evidence",
+    "pathname": "/evidence",
+    "h1": [
+      "Model Evidence & Validation"
+    ],
+    "h2": [
+      "How the AI Works",
+      "Training Dataset Summary",
+      "Validation Study Results",
+      "Population Suitability",
+      "Limitations",
+      "Regulatory Compliance"
+    ],
+    "h3": [
+      "How the AI Works Understanding the technology",
+      "Training Dataset Summary Data sources and demographics",
+      "Validation Study Results Performance metrics and confidence",
+      "Population Suitability Intended use and patient criteria",
+      "Limitations Important considerations",
+      "Regulatory Compliance Certifications and standards"
+    ],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "How the AI Works Understanding the technology",
+      "Training Dataset Summary Data sources and demographics",
+      "Validation Study Results Performance metrics and confidence",
+      "Population Suitability Intended use and patient criteria",
+      "Limitations Important considerations",
+      "Regulatory Compliance Certifications and standards"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [],
+    "inputs": [],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Model Evidence & Validation Scientific foundation and clinical validation of the EEG dementia screening AI Clinically Validated HIPAA Compliant CE Marked (Pending) How the AI Works Understanding the technology Training Dataset Summary Data sources and demographics Validation Study Results Performance metrics and confidence Population Suitability Intended use and patient criteria Limitations Important considerations Regulatory Compliance Certifications and standards"
+  },
+  {
+    "label": "09_followups",
+    "url": "http://localhost:4173/followups",
+    "pathname": "/followups",
+    "h1": [
+      "Upcoming Follow-Ups"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Schedule New Follow-Up",
+      "All",
+      "All priorities"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [
+      {
+        "th": [
+          "Patient",
+          "Follow-up Date",
+          "Priority",
+          "Clinician Note",
+          "Actions"
+        ],
+        "rowCount": 1
+      }
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "Search follow-ups...",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Upcoming Follow-Ups Follow-up monitoring of known MCI/dementia patients Schedule New Follow-Up All All priorities 0 follow-ups Patient Follow-up Date Priority Clinician Note Actions No follow-ups found"
+  },
+  {
+    "label": "10_settings",
+    "url": "http://localhost:4173/settings",
+    "pathname": "/settings",
+    "h1": [
+      "Settings"
+    ],
+    "h2": [
+      "Doctor Information"
+    ],
+    "h3": [],
+    "buttons": [
+      "3",
+      "Test Hospital Clinician",
+      "Patients",
+      "Profile",
+      "Integration",
+      "Export",
+      "Privacy",
+      "Roles",
+      "Neurology",
+      "Save Changes"
+    ],
+    "links": [
+      {
+        "text": "Dashboard",
+        "href": "/"
+      },
+      {
+        "text": "EEG Insights",
+        "href": "/upload"
+      },
+      {
+        "text": "Neuro Intake",
+        "href": "/neuro-intake"
+      },
+      {
+        "text": "Longitudinal",
+        "href": "/longitudinal"
+      },
+      {
+        "text": "Model Evidence",
+        "href": "/evidence"
+      },
+      {
+        "text": "Follow-Ups",
+        "href": "/followups"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      },
+      {
+        "text": "Admin",
+        "href": "/admin"
+      }
+    ],
+    "tables": [],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "",
+        "name": "",
+        "id": "doctorName",
+        "value": "Dr. Sharma"
+      },
+      {
+        "tag": "INPUT",
+        "type": "email",
+        "placeholder": "",
+        "name": "",
+        "id": "email",
+        "value": "sharma@hospital.com"
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "placeholder": "",
+        "name": "",
+        "id": "hospital",
+        "value": "City Neuro Hospital"
+      }
+    ],
+    "textSnippet": "3 Test Hospital Clinician Dashboard EEG Insights Patients Neuro Intake Longitudinal Model Evidence Follow-Ups Settings Admin This tool provides risk assessment and is not a clinical diagnosis. Always consult qualified medical professionals. Settings Manage your account, integrations, and preferences Profile Integration Export Privacy Roles Doctor Information Update your professional details Full Name Email Specialty Neurology Hospital/Clinic Name Save Changes"
+  },
+  {
+    "label": "11_admin",
+    "url": "http://localhost:4173/admin",
+    "pathname": "/admin",
+    "h1": [],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "Log out",
+      "Invite Keys",
+      "Accounts & Credits",
+      "Analytics",
+      "+ New Key",
+      "↻"
+    ],
+    "links": [],
+    "tables": [
+      {
+        "th": [
+          "Key",
+          "Status",
+          "Type",
+          "Usage",
+          "Created By",
+          "Used By",
+          "Expires",
+          "Created",
+          ""
+        ],
+        "rowCount": 1
+      }
+    ],
+    "inputs": [],
+    "textSnippet": "NEMA Admin Log out Invite Keys Accounts & Credits Analytics + New Key ↻ Key Status Type Usage Created By Used By Expires Created No keys found"
+  },
+  {
+    "label": "12_admin_keys_gate",
+    "url": "http://localhost:4173/admin-keys",
+    "pathname": "/admin-keys",
+    "h1": [
+      "NEMA Admin"
+    ],
+    "h2": [],
+    "h3": [],
+    "buttons": [
+      "Access Admin Panel"
+    ],
+    "links": [],
+    "tables": [],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "password",
+        "placeholder": "Enter admin secret",
+        "name": "",
+        "id": "",
+        "value": ""
+      }
+    ],
+    "textSnippet": "NEMA Admin Invite key & account management Admin Secret Access Admin Panel"
+  }
+]
