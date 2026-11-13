@@ -300,3 +300,23 @@
     height: auto !important;
   }
 }
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide flip-y element/box on small/mobile screens (< 1024px) */
+@media (max-width: 1024px) {
+  .flip-y,
+  [class*="flip-y"],
+  [class*="flip_y"],
+  .flip-y-box {
+    display: none !important;
+  }
+}
+

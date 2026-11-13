@@ -26,16 +26,18 @@ const LEVEL_STYLES: Record<string, string> = {
 export const BrainStatesView: React.FC<BrainStatesViewProps> = ({ loading, error, data }) => {
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-20 text-muted-foreground gap-3">
-        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary" />
-        <span className="text-sm">Loading brain state data…</span>
+      <div className="rounded-xl border border-border bg-card p-12 text-center shadow-sm">
+        <div className="flex items-center justify-center py-6 text-muted-foreground gap-3">
+          <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary" />
+          <span className="text-sm font-medium">Loading brain state data…</span>
+        </div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="rounded-lg border border-destructive/30 bg-destructive/10 px-5 py-4 text-sm text-destructive">
+      <div className="rounded-xl border border-destructive/30 bg-destructive/10 px-5 py-4 text-sm text-destructive">
         {error}
       </div>
     );
@@ -43,9 +45,14 @@ export const BrainStatesView: React.FC<BrainStatesViewProps> = ({ loading, error
 
   if (!data) {
     return (
-      <div className="flex flex-col items-center justify-center py-20 gap-3 text-muted-foreground">
-        <BarChart3 className="h-10 w-10 opacity-30" />
-        <p className="text-sm">No brain state data available for this session.</p>
+      <div className="rounded-xl border border-border bg-card p-12 text-center shadow-sm">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted mx-auto mb-3">
+          <BarChart3 className="h-6 w-6 text-muted-foreground opacity-60" />
+        </div>
+        <h3 className="font-semibold text-foreground text-sm sm:text-base">No Brain State Data Available</h3>
+        <p className="text-xs sm:text-sm text-muted-foreground mt-1 max-w-sm mx-auto leading-relaxed">
+          Brain state dynamics were not computed for this screening session, or this recording does not contain spectral brain state features.
+        </p>
       </div>
     );
   }

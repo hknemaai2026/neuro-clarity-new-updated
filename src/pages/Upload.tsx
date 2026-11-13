@@ -157,6 +157,16 @@ export default function Upload() {
 
   const [currentStep, setCurrentStep] = useState<Step>(1);
   const [selectedModule, setSelectedModule] = useState<ModuleType | null>(null);
+  const stepperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (stepperRef.current) {
+      const activeEl = stepperRef.current.querySelector('[data-active="true"]') as HTMLElement;
+      if (activeEl) {
+        activeEl.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+      }
+    }
+  }, [currentStep]);
 
   // ── Patients ───────────────────────────────────────────────────────────────
   const [patients, setPatients] = useState<Patient[]>([]);
@@ -722,56 +732,110 @@ export default function Upload() {
       {/* Main Content */}
       <div className="mx-auto max-w-3xl space-y-6">
         {/* Header */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
-            <h1 className="text-2xl font-bold text-foreground">New EEG Screening</h1>
-            <p className="text-sm text-muted-foreground mt-1">Complete all steps to generate a clinical report</p>
+            <h1 className="text-xl sm:text-2xl font-bold text-foreground">New EEG Screening</h1>
+            <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
+              Complete all steps to generate a clinical report
+            </p>
           </div>
-          <Badge variant="outline" className="text-xs px-3 py-1">
+          <Badge variant="outline" className="hidden sm:inline-flex text-xs px-3 py-1 self-start sm:self-auto">
             Step {currentStep} of {STEPS.length}
           </Badge>
         </div>
 
-        {/* Stepper */}
-        <div className="flex items-center">
-          {STEPS.map((step, idx) => (
-            <div key={step.number} className="flex items-center flex-1 last:flex-none">
-              <div className="flex flex-col items-center gap-1.5">
-                <div
-                  className={cn(
-                    "flex h-10 w-10 items-center justify-center rounded-full border-2 transition-all duration-200",
-                    currentStep > step.number
-                      ? "border-green-500 bg-green-500 text-white"
-                      : currentStep === step.number
-                      ? "border-primary bg-primary text-primary-foreground"
-                      : "border-border bg-background text-muted-foreground"
-                  )}
-                >
-                  {currentStep > step.number ? (
-                    <Check className="h-5 w-5" />
-                  ) : (
-                    <step.icon className="h-4 w-4" />
-                  )}
-                </div>
-                <span
-                  className={cn(
-                    "text-xs font-medium whitespace-nowrap",
-                    currentStep >= step.number ? "text-foreground" : "text-muted-foreground"
-                  )}
-                >
-                  {step.title}
-                </span>
+        {/* Mobile Step Status Card (< sm) */}
+        <div className="sm:hidden rounded-xl border border-border bg-card p-3.5 shadow-sm space-y-2.5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                {(() => {
+                  const CurrentIcon = STEPS[currentStep - 1]?.icon || Activity;
+                  return <CurrentIcon className="h-4 w-4" />;
+                })()}
               </div>
-              {idx < STEPS.length - 1 && (
-                <div
-                  className={cn(
-                    "h-0.5 flex-1 mx-2 mb-4 transition-all duration-200",
-                    currentStep > step.number ? "bg-green-500" : "bg-border"
-                  )}
-                />
-              )}
+              <div>
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                  Step {currentStep} of {STEPS.length}
+                </span>
+                <p className="text-sm font-bold text-foreground leading-tight">
+                  {STEPS[currentStep - 1]?.title}
+                </p>
+              </div>
             </div>
-          ))}
+            <Badge variant="outline" className="text-[11px] font-medium px-2 py-0.5">
+              {Math.round((currentStep / STEPS.length) * 100)}% Complete
+            </Badge>
+          </div>
+
+          {/* 6-step progress segments */}
+          <div className="grid grid-cols-6 gap-1 h-1.5 w-full">
+            {STEPS.map((step) => (
+              <div
+                key={step.number}
+                className={cn(
+                  "rounded-full transition-all duration-300",
+                  currentStep > step.number
+                    ? "bg-green-500"
+                    : currentStep === step.number
+                    ? "bg-primary"
+                    : "bg-muted"
+                )}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Stepper with horizontal scroll for mobile and full width for desktop */}
+        <div ref={stepperRef} className="w-full overflow-x-auto py-1 no-scrollbar">
+          <div className="flex items-center min-w-[560px] sm:min-w-0 w-full px-1">
+            {STEPS.map((step, idx) => (
+              <div
+                key={step.number}
+                data-active={currentStep === step.number}
+                className="flex items-center flex-1 last:flex-none"
+              >
+                <div className="flex flex-col items-center gap-1.5 shrink-0">
+                  <div
+                    className={cn(
+                      "flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border-2 transition-all duration-200",
+                      currentStep > step.number
+                        ? "border-green-500 bg-green-500 text-white shadow-sm"
+                        : currentStep === step.number
+                        ? "border-primary bg-primary text-primary-foreground shadow-sm ring-2 ring-primary/20"
+                        : "border-border bg-background text-muted-foreground"
+                    )}
+                  >
+                    {currentStep > step.number ? (
+                      <Check className="h-4 w-4 sm:h-5 sm:w-5" />
+                    ) : (
+                      <step.icon className="h-4 w-4" />
+                    )}
+                  </div>
+                  <span
+                    className={cn(
+                      "text-[11px] sm:text-xs font-medium whitespace-nowrap",
+                      currentStep === step.number
+                        ? "text-primary font-semibold"
+                        : currentStep > step.number
+                        ? "text-foreground"
+                        : "text-muted-foreground"
+                    )}
+                  >
+                    {step.title}
+                  </span>
+                </div>
+                {idx < STEPS.length - 1 && (
+                  <div
+                    className={cn(
+                      "h-0.5 flex-1 min-w-[16px] sm:min-w-[24px] mx-2 mb-4 transition-all duration-200",
+                      currentStep > step.number ? "bg-green-500" : "bg-border"
+                    )}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Card Body */}
@@ -785,34 +849,38 @@ export default function Upload() {
                   Choose the analysis pipeline before adding patient details
                 </p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 min-[960px]:grid-cols-3 gap-4 items-stretch">
                 {MODULES.map((mod) => (
                   <div
                     key={mod.id}
                     onClick={() => setSelectedModule(mod.id)}
                     className={cn(
-                      "p-5 rounded-xl border-2 cursor-pointer transition-all",
+                      "flex flex-col sm:flex-row min-[960px]:flex-col sm:items-center min-[960px]:items-start justify-between p-4 sm:p-5 rounded-xl border-2 cursor-pointer transition-all gap-4 h-full",
                       selectedModule === mod.id
-                        ? "border-primary bg-accent"
+                        ? "border-primary bg-accent/60 shadow-sm"
                         : "border-border hover:border-primary/50 hover:bg-muted/30"
                     )}
                   >
-                    <div
-                      className={cn(
-                        "flex h-12 w-12 items-center justify-center rounded-xl mb-4",
-                        selectedModule === mod.id
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-muted text-muted-foreground"
-                      )}
-                    >
-                      <mod.icon className="h-6 w-6" />
+                    <div className="flex flex-col sm:flex-row min-[960px]:flex-col sm:items-center min-[960px]:items-start gap-3 sm:gap-4 flex-1">
+                      <div
+                        className={cn(
+                          "flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl shrink-0 transition-colors",
+                          selectedModule === mod.id
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-muted text-muted-foreground"
+                        )}
+                      >
+                        <mod.icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground text-sm sm:text-base leading-snug">{mod.name}</h3>
+                        <p className="text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">
+                          {mod.description}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="font-semibold text-foreground">{mod.name}</h3>
-                    <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">
-                      {mod.description}
-                    </p>
                     {selectedModule === mod.id && (
-                      <div className="flex items-center gap-1.5 mt-3 text-xs font-semibold text-primary">
+                      <div className="flex items-center gap-1.5 text-xs font-semibold text-primary shrink-0 self-end sm:self-center min-[960px]:self-start min-[960px]:mt-3">
                         <Check className="h-4 w-4" /> Selected
                       </div>
                     )}
@@ -940,7 +1008,7 @@ export default function Upload() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-x-8 gap-y-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-8 sm:gap-y-0">
                 {/* Left col */}
                 <div className="space-y-4">
                   <div>
@@ -1080,7 +1148,7 @@ export default function Upload() {
               </div>
 
               {selectedModule === "cognitive" && (
-                <div className="border-t border-border pt-4 grid grid-cols-2 gap-4">
+                <div className="border-t border-border pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <Label>
                       MoCA Score{" "}
@@ -1319,7 +1387,7 @@ export default function Upload() {
                 </p>
               </div>
 
-              <div className="rounded-lg bg-muted/40 border border-border p-4 grid grid-cols-2 gap-4">
+              <div className="rounded-lg bg-muted/40 border border-border p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
                     Supported Formats

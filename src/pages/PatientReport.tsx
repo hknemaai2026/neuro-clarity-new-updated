@@ -205,8 +205,10 @@ const PatientReport = () => {
   const [cognitiveMarkers, setCognitiveMarkers] = useState<any>(initialCognitiveMarkers);
   const [brainAgeData, setBrainAgeData] = useState(initialBrainAgeData);
   const [riskTrendData, setRiskTrendData] = useState(initialRiskTrendData);
-  const [graphData, setGraphData] = useState(null);
   const [brainStatesData, setBrainStatesData] = useState<any>(null);
+  const reportDataAttemptedRef = useRef<string | null>(null);
+  const brainStatesAttemptedRef = useRef<string | null>(null);
+  const ageProfileAttemptedRef = useRef<string | null>(null);
   const [csvDownloadLoading, setCsvDownloadLoading] = useState(false);
   const [pdfDownloadLoading, setPdfDownloadLoading] = useState(false);
   const [screenshotPdfLoading, setScreenshotPdfLoading] = useState(false);
@@ -272,48 +274,38 @@ const PatientReport = () => {
 
   const [features, setFeatures] = useState<Record<string, boolean>>({});
 
-  // Fetch feature flags to control tab visibility
+  // Fetch feature flags to control tab visibility (single authenticated request)
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      fetch(`${API_BASE_URL}/me/features`, {
-        headers: { Authorization: `Bearer ${token}` }
+    fetchWithAuth(`${API_BASE_URL}/me/features`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (d?.features) {
+          setFeatures(d.features);
+          setEnabledFeatures(new Set(Object.entries(d.features).filter(([, v]) => Boolean(v)).map(([k]) => k)));
+        }
       })
-        .then(r => r.ok ? r.json() : null)
-        .then(d => {
-          if (d?.features) {
-            setFeatures(d.features);
-            setEnabledFeatures(new Set(Object.entries(d.features).filter(([, v]) => v).map(([k]) => k)));
-          }
-        })
-        .catch(() => {});
-    }
-
-    fetchWithAuth(`${API_BASE_URL}/hospitals/features`)
-      .then(r => r.ok ? r.json() : null)
-      .then(d => {
-        if (!d) return;
-        const keys: string[] = Array.isArray(d)
-          ? d.map((f: any) => (typeof f === "string" ? f : f.key ?? f.name ?? f.id))
-          : Array.isArray(d.features)
-            ? d.features.map((f: any) => (typeof f === "string" ? f : f.key ?? f.name))
-            : Object.entries(d.features ?? d).filter(([, v]) => v).map(([k]) => k);
-        setEnabledFeatures(prev => prev ? new Set([...prev, ...keys.filter(Boolean)]) : new Set(keys.filter(Boolean)));
-      })
-      .catch(() => { /* silently keep null → all tabs visible */ });
+      .catch(() => { /* keep null → all tabs visible */ });
   }, []);
 
   useEffect(() => {
-    if (activeReportTab === "age_profile" && summaryResultId && !ageProfileData && !ageProfileLoading) {
+    if (
+      activeReportTab === "age_profile" &&
+      summaryResultId &&
+      !ageProfileData &&
+      !ageProfileLoading &&
+      ageProfileAttemptedRef.current !== String(summaryResultId)
+    ) {
+      ageProfileAttemptedRef.current = String(summaryResultId);
       setAgeProfileLoading(true);
       setAgeProfileError(null);
       fetchWithAuth(`${API_BASE_URL}/age-profile/${encodeURIComponent(String(summaryResultId))}`)
         .then(async (res) => {
-          const data = await res.json();
           if (res.ok) {
+            const data = await res.json().catch(() => null);
             setAgeProfileData(data);
           } else {
-            setAgeProfileError(data?.error || "Failed to load age profile.");
+            const data = await res.json().catch(() => null);
+            setAgeProfileError(data?.error || data?.detail || "Failed to load age profile.");
           }
         })
         .catch(() => setAgeProfileError("Network error — could not load age profile."))
@@ -322,15 +314,27 @@ const PatientReport = () => {
   }, [activeReportTab, summaryResultId, ageProfileData, ageProfileLoading]);
 
   useEffect(() => {
-    if (activeReportTab === "brain_states" && reportId && !brainStatesData && !brainStatesLoading) {
+    if (
+      activeReportTab === "brain_states" &&
+      reportId &&
+      !brainStatesData &&
+      !brainStatesLoading &&
+      brainStatesAttemptedRef.current !== String(reportId)
+    ) {
+      brainStatesAttemptedRef.current = String(reportId);
       setBrainStatesLoading(true);
       setBrainStatesError(null);
       fetchWithAuth(`${API_BASE_URL}/v1/brain-states/${encodeURIComponent(String(reportId))}`)
         .then(async (res) => {
-          const data = await res.json();
           if (res.ok) {
+            const data = await res.json().catch(() => null);
             setBrainStatesData(data);
+          } else if (res.status === 404) {
+            // Brain states not generated/available for this screening record
+            setBrainStatesData(null);
+            setBrainStatesError(null);
           } else {
+            const data = await res.json().catch(() => null);
             setBrainStatesError(data?.error || data?.detail || "Failed to load brain state data.");
           }
         })
@@ -345,18 +349,36 @@ const PatientReport = () => {
     let cancelled = false;
     let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
-    const loadCardAndGraphData = async () => {
+    const loadReportData = async () => {
       if (!reportId) return;
+
+      // Prevent redundant fetches for the same reportId
+      if (reportDataAttemptedRef.current === String(reportId)) return;
+      reportDataAttemptedRef.current = String(reportId);
 
       try {
         let cardsData;
         const encodedJobId = reportId ? encodeURIComponent(reportId) : "";
-        
-        if (fromPatientHistory) {
-          // If navigated from patient history, call historypreview API
-          cardsData = await historypreview(reportId, {});
+        const isFromUpload = Boolean(location.state?.fromUpload);
+
+        if (fromPatientHistory || !isFromUpload) {
+          // Existing / completed record (direct URL or history view):
+          // Call report-history (historypreview) directly to avoid failing /report/ call
+          try {
+            cardsData = await historypreview(reportId, {});
+          } catch {}
+
+          if (!cardsData || (!cardsData.cards && !cardsData.patient_info && !cardsData.rf_risk)) {
+            try {
+              const cardsRes = await fetchWithAuth(`${API_BASE_URL}/report/${encodedJobId}`);
+              if (cardsRes.ok) {
+                cardsData = await cardsRes.json();
+              }
+            } catch {}
+          }
         } else {
-          // First try regular report API (for active pipeline jobs)
+          // Navigated directly from Upload page in current session:
+          // Check active pipeline /report/ first, then fallback to historypreview
           try {
             const cardsRes = await fetchWithAuth(`${API_BASE_URL}/report/${encodedJobId}`);
             if (cardsRes.ok) {
@@ -364,7 +386,6 @@ const PatientReport = () => {
             }
           } catch {}
 
-          // Fallback to historypreview (for completed screening records)
           if (!cardsData || (!cardsData.cards && !cardsData.patient_info && !cardsData.rf_risk)) {
             try {
               const histData = await historypreview(reportId, {});
@@ -391,30 +412,6 @@ const PatientReport = () => {
         if (!cancelled) {
           setIsLoading(false);
         }
-
-        const graphsRes = await fetchWithAuth(`${API_BASE_URL}/graphs/${encodedJobId}`);
-        if (graphsRes.ok) {
-          const graphDataResponse = await graphsRes.json();
-          setGraphData(graphDataResponse);
-        }
-
-        // Fetch brain states
-        try {
-          const bsRes = await fetchWithAuth(`${API_BASE_URL}/v1/brain-states/${encodedJobId}`);
-          if (bsRes.ok) {
-            const bsData = await bsRes.json();
-            console.log("[BrainStates] API response:", JSON.stringify(bsData).slice(0, 500));
-            setBrainStatesData(bsData);
-          } else {
-            console.warn("[BrainStates] API returned", bsRes.status, "for", `/v1/brain-states/${encodedJobId}`);
-          }
-        } catch (_) {
-          // brain states optional — fail silently
-        }
-
-        if (!cancelled) {
-          setIsLoading(false);
-        }
       } catch (error) {
         console.error("Error loading report data:", error);
         if (!cancelled) {
@@ -424,7 +421,7 @@ const PatientReport = () => {
       }
     };
 
-    loadCardAndGraphData();
+    loadReportData();
     return () => {
       cancelled = true;
       if (timeoutId) clearTimeout(timeoutId);
@@ -951,97 +948,99 @@ const PatientReport = () => {
   return (
     <MainLayout>
       <div className="space-y-6">
-        {/* Top action bar */}
-        <div className="flex mb-5 flex-col gap-4 rounded-2xl border border-border/50 bg-card p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
-          <div className="inline-flex w-fit rounded-xl bg-muted/70 p-1">
-            {hasFeature("ai_summary") && (
-              <button
-                type="button"
-                onClick={() => setActiveReportTab("summary")}
-                disabled={!summaryResultId}
-                className={cn(
-                  "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200",
-                  activeReportTab === "summary"
-                    ? "bg-background text-foreground shadow-md"
-                    : "text-muted-foreground hover:bg-background/60 hover:text-foreground",
-                  !summaryResultId && "cursor-not-allowed opacity-50"
-                )}
-              >
-                Findings & Summary
-              </button>
-            )}
-            {hasFeature("risk_score") && (
-              <button
-                type="button"
-                onClick={() => setActiveReportTab("analysis")}
-                className={cn(
-                  "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200",
-                  activeReportTab === "analysis"
-                    ? "bg-background text-foreground shadow-md"
-                    : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
-                )}
-              >
-                Cognitive Analysis
-              </button>
-            )}
-            {hasFeature("brain_age") && (
-              <button
-                type="button"
-                onClick={() => setActiveReportTab("age_profile")}
-                disabled={!summaryResultId}
-                className={cn(
-                  "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200",
-                  activeReportTab === "age_profile"
-                    ? "bg-background text-foreground shadow-md"
-                    : "text-muted-foreground hover:bg-background/60 hover:text-foreground",
-                  !summaryResultId && "cursor-not-allowed opacity-50"
-                )}
-              >
-                Age Normative Context
-              </button>
-            )}
-            {hasFeature("biomarkers") && (
-              <button
-                type="button"
-                onClick={() => setActiveReportTab("brain_states")}
-                className={cn(
-                  "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200",
-                  activeReportTab === "brain_states"
-                    ? "bg-background text-foreground shadow-md"
-                    : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
-                )}
-              >
-                Brain States
-              </button>
-            )}
-            {hasFeature("biomarkers") && (
-              <button
-                type="button"
-                onClick={() => setActiveReportTab("clinical_insights")}
-                className={cn(
-                  "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200",
-                  activeReportTab === "clinical_insights"
-                    ? "bg-background text-foreground shadow-md"
-                    : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
-                )}
-              >
-                Insights & Activities
-              </button>
-            )}
-            {hasFeature("treatment_plan") && (
-              <button
-                type="button"
-                onClick={() => setActiveReportTab("personalised")}
-                className={cn(
-                  "relative rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200",
-                  activeReportTab === "personalised"
-                    ? "bg-background text-foreground shadow-md"
-                    : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
-                )}
-              >
-                My Plan
-              </button>
-            )}
+        {/* Top action bar / Tab Navigation */}
+        <div className="mb-5 rounded-2xl border border-border/50 bg-card p-2 sm:p-2.5 shadow-sm">
+          <div className="w-full overflow-x-auto no-scrollbar">
+            <div className="inline-flex min-w-full sm:min-w-0 items-center gap-1.5 rounded-xl bg-muted/70 p-1">
+              {hasFeature("ai_summary") && (
+                <button
+                  type="button"
+                  onClick={() => setActiveReportTab("summary")}
+                  disabled={!summaryResultId}
+                  className={cn(
+                    "relative shrink-0 whitespace-nowrap rounded-lg px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-200",
+                    activeReportTab === "summary"
+                      ? "bg-background text-foreground shadow-md"
+                      : "text-muted-foreground hover:bg-background/60 hover:text-foreground",
+                    !summaryResultId && "cursor-not-allowed opacity-50"
+                  )}
+                >
+                  Findings & Summary
+                </button>
+              )}
+              {hasFeature("risk_score") && (
+                <button
+                  type="button"
+                  onClick={() => setActiveReportTab("analysis")}
+                  className={cn(
+                    "relative shrink-0 whitespace-nowrap rounded-lg px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-200",
+                    activeReportTab === "analysis"
+                      ? "bg-background text-foreground shadow-md"
+                      : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
+                  )}
+                >
+                  Cognitive Analysis
+                </button>
+              )}
+              {hasFeature("brain_age") && (
+                <button
+                  type="button"
+                  onClick={() => setActiveReportTab("age_profile")}
+                  disabled={!summaryResultId}
+                  className={cn(
+                    "relative shrink-0 whitespace-nowrap rounded-lg px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-200",
+                    activeReportTab === "age_profile"
+                      ? "bg-background text-foreground shadow-md"
+                      : "text-muted-foreground hover:bg-background/60 hover:text-foreground",
+                    !summaryResultId && "cursor-not-allowed opacity-50"
+                  )}
+                >
+                  Age Normative Context
+                </button>
+              )}
+              {hasFeature("biomarkers") && (
+                <button
+                  type="button"
+                  onClick={() => setActiveReportTab("brain_states")}
+                  className={cn(
+                    "relative shrink-0 whitespace-nowrap rounded-lg px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-200",
+                    activeReportTab === "brain_states"
+                      ? "bg-background text-foreground shadow-md"
+                      : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
+                  )}
+                >
+                  Brain States
+                </button>
+              )}
+              {hasFeature("biomarkers") && (
+                <button
+                  type="button"
+                  onClick={() => setActiveReportTab("clinical_insights")}
+                  className={cn(
+                    "relative shrink-0 whitespace-nowrap rounded-lg px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-200",
+                    activeReportTab === "clinical_insights"
+                      ? "bg-background text-foreground shadow-md"
+                      : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
+                  )}
+                >
+                  Insights & Activities
+                </button>
+              )}
+              {hasFeature("treatment_plan") && (
+                <button
+                  type="button"
+                  onClick={() => setActiveReportTab("personalised")}
+                  className={cn(
+                    "relative shrink-0 whitespace-nowrap rounded-lg px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium transition-all duration-200",
+                    activeReportTab === "personalised"
+                      ? "bg-background text-foreground shadow-md"
+                      : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
+                  )}
+                >
+                  My Plan
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
