@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from "react";
+import { useLocation } from "react-router-dom";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -36,13 +37,14 @@ import {
   UploadCloud,
   UserRound,
   Waves,
+  Loader2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { processEEG } from "@/app/eeg";
+import { processEEG, analyzeEEGFile } from "@/app/eeg";
 import { createPatient, getPatientsDb, type PatientPayload } from "@/app/patients";
 import { toast } from "@/hooks/use-toast";
 
-type StepId = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+type StepId = 1 | 2 | 3 | 4 | 5 | 6;
 
 interface PatientOption {
   patient_code: string;
@@ -88,12 +90,12 @@ type ReportData = {
 
 const steps = [
   { id: 1, title: "Upload EEG file" },
-  { id: 2, title: "Patient details" },
-  { id: 3, title: "Recording info" },
-  { id: 4, title: "Background" },
-  { id: 5, title: "Findings" },
-  { id: 6, title: "Conclusion" },
-  { id: 7, title: "Review" },
+  // { id: 2, title: "Patient details" }, // Commented out: Patient details are loaded from the previous form (Upload page)
+  { id: 2, title: "Recording info" },
+  { id: 3, title: "Background" },
+  { id: 4, title: "Findings" },
+  { id: 5, title: "Conclusion" },
+  { id: 6, title: "Review" },
 ] as const;
 
 const backgroundOptions = [
@@ -144,10 +146,26 @@ const correlateOptions = [
 ];
 
 export default function EegTechnicianReport() {
+  const location = useLocation();
+  const incomingPatient = useMemo(() => {
+    if (location.state?.patientInfo) {
+      try {
+        sessionStorage.setItem("technician_patient_info", JSON.stringify(location.state.patientInfo));
+      } catch {}
+      return location.state.patientInfo;
+    }
+    try {
+      const stored = sessionStorage.getItem("technician_patient_info");
+      return stored ? JSON.parse(stored) : null;
+    } catch {
+      return null;
+    }
+  }, [location.state]);
+
   const [currentStep, setCurrentStep] = useState<StepId>(1);
   const [background, setBackground] = useState("normal");
   const [patients, setPatients] = useState<PatientOption[]>([]);
-  const [selectedPatientCode, setSelectedPatientCode] = useState("");
+  const [selectedPatientCode, setSelectedPatientCode] = useState(incomingPatient?.id ?? "");
   const [isAddPatientModalOpen, setIsAddPatientModalOpen] = useState(false);
   const [newPatient, setNewPatient] = useState({
     name: "",
@@ -159,14 +177,15 @@ export default function EegTechnicianReport() {
   });
   const [report, setReport] = useState<ReportData>({
     file: null,
-    patientName: "",
-    age: "",
-    gender: "",
-    handedness: "",
-    neuroNo: "",
-    uhid: "",
-    eegNo: "",
-    doctor: "",
+    patientName: incomingPatient?.name ?? "",
+    pid: incomingPatient?.id ?? undefined,
+    age: incomingPatient?.age ? String(incomingPatient.age) : "",
+    gender: incomingPatient?.gender ?? "",
+    handedness: incomingPatient?.handedness ?? "",
+    neuroNo: incomingPatient?.neuroNo ?? "",
+    uhid: incomingPatient?.uhid ?? "",
+    eegNo: incomingPatient?.eegNo ?? "",
+    doctor: incomingPatient?.doctor ?? "",
     lastAttack: "",
     lastMeal: "",
     diagnosis: "",
@@ -185,10 +204,13 @@ export default function EegTechnicianReport() {
     normalFindings: ["No epileptiform discharges"],
     abnormalFindings: [],
     regions: ["Bilateral"],
-    hospital: "",
-    hospitalAddress: "",
+    hospital: incomingPatient?.hospital ?? "",
+    hospitalAddress: incomingPatient?.hospitalAddress ?? "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isAnalyzingFile, setIsAnalyzingFile] = useState(false);
+  const [analysisResult, setAnalysisResult] = useState<any>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
@@ -222,10 +244,45 @@ export default function EegTechnicianReport() {
     setReport((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] ?? null;
     setReport((prev) => ({ ...prev, file }));
     setSubmitError(null);
+    setAnalysisResult(null);
+
+    if (!file) return;
+
+    setIsAnalyzingFile(true);
+    try {
+      const analysis = await analyzeEEGFile(file, report.recordType);
+      setAnalysisResult(analysis);
+
+      const bgClass = analysis.background_class ?? "normal";
+      setBackground(["normal", "slow", "sedated"].includes(bgClass) ? bgClass : "custom");
+
+      setReport((prev) => ({
+        ...prev,
+        backgroundText:
+          analysis.finding_background || analysis.background_text || prev.backgroundText,
+        normalFindings:
+          analysis.normal_chips && analysis.normal_chips.length
+            ? analysis.normal_chips
+            : prev.normalFindings,
+        abnormalFindings:
+          analysis.abnormal_chips && analysis.abnormal_chips.length
+            ? analysis.abnormal_chips
+            : [],
+        regions:
+          analysis.region_chips && analysis.region_chips.length
+            ? analysis.region_chips
+            : prev.regions,
+        conclusion: analysis.conclusion_draft || prev.conclusion,
+      }));
+    } catch (err) {
+      console.error("EEG pre-analysis failed:", err);
+    } finally {
+      setIsAnalyzingFile(false);
+    }
   };
 
   const handlePatientSelect = (value: string) => {
@@ -308,31 +365,32 @@ export default function EegTechnicianReport() {
   };
 
   const handleSubmitReport = async () => {
-    console.log(report)
     if (!report.file) {
       setSubmitError("Please upload an EDF file before submitting.");
       toast({ title: "Submit failed", description: "No EEG file selected.", variant: "destructive" });
       return;
     }
 
-    if (!report.patientName) {
+    if (!report.patientName && !incomingPatient) {
       setSubmitError("Patient name is required for final submission.");
       toast({ title: "Submit failed", description: "Enter the patient's full name before submitting.", variant: "destructive" });
       return;
     }
 
     setSubmitError(null);
-    setCurrentStep(7);
+    setCurrentStep(6);
   };
 
   const handleFinalSubmit = async () => {
+    if (isSubmitted) return;
+
     if (!report.file) {
       setSubmitError("Please upload an EDF file before submitting.");
       toast({ title: "Submit failed", description: "No EEG file selected.", variant: "destructive" });
       return;
     }
 
-    if (!report.patientName) {
+    if (!report.patientName && !incomingPatient) {
       setSubmitError("Patient name is required for final submission.");
       toast({ title: "Submit failed", description: "Enter the patient's full name before submitting.", variant: "destructive" });
       return;
@@ -341,10 +399,10 @@ export default function EegTechnicianReport() {
     setSubmitError(null);
     setIsSubmitting(true);
     try {
-   let processed=   await processEEG({
+      let processed = await processEEG({
         file: report.file,
         name: report.patientName,
-        pid:report.pid,
+        pid: report.pid,
         age: report.age,
         sex: getSexValue(report.gender),
         sensorium: report.sensorium,
@@ -372,8 +430,10 @@ export default function EegTechnicianReport() {
         gender: report.gender,
         diagnosis: report.diagnosis,
         medications: report.medications,
+        precomputedAutofill: analysisResult ?? undefined,
       });
 
+      setIsSubmitted(true);
       toast({ title: "Report submitted", description: "EEG report has been submitted successfully." });
       generateNIMHANSPDF(report, processed);
     } catch (error) {
@@ -422,6 +482,15 @@ export default function EegTechnicianReport() {
       case 1:
         return (
           <div className="space-y-6">
+            {incomingPatient && (
+              <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+                <span className="font-medium">Patient details pre-filled:</span> {report.patientName || incomingPatient.name}
+                {(report.age || incomingPatient.age) ? ` · ${report.age || incomingPatient.age} yrs` : ""}
+                {(report.gender || incomingPatient.gender) ? ` · ${report.gender || incomingPatient.gender}` : ""}
+                {(report.hospital || incomingPatient.hospital) ? ` · ${report.hospital || incomingPatient.hospital}` : ""}
+                <span className="text-xs text-emerald-600 font-normal ml-1">(Loaded from previous form)</span>
+              </div>
+            )}
             <div className="rounded-2xl border border-dashed border-primary/30 bg-primary/5 p-8 text-center">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <UploadCloud className="h-7 w-7" />
@@ -448,8 +517,28 @@ export default function EegTechnicianReport() {
               ) : (
                 <p className="mt-3 text-sm text-muted-foreground">Accepted format: .edf</p>
               )}
+              {isAnalyzingFile && (
+                <div className="mt-4 flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm text-primary">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  Analysing EEG signal — background activity, epileptiform detection…
+                </div>
+              )}
+              {analysisResult && !isAnalyzingFile && (
+                <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
+                  <p className="font-medium">AI analysis complete</p>
+                  <p className="mt-1">
+                    Background: <span className="font-semibold capitalize">{analysisResult.background_class}</span> ·{" "}
+                    {analysisResult.is_abnormal ? (
+                      <span className="text-rose-600 font-semibold">Abnormal — epileptiform activity detected</span>
+                    ) : (
+                      <span className="text-emerald-700 font-semibold">No epileptiform discharges</span>
+                    )}
+                  </p>
+                  <p className="mt-1 text-emerald-700">Tabs 3–5 (Background, Findings & Conclusion) have been pre-filled. You can review and edit each section.</p>
+                </div>
+              )}
               <div className="mt-4 rounded-xl border border-border/60 bg-muted/10 p-4 text-sm text-muted-foreground">
-                The EEG file is saved in the report object and will be submitted on the final step.
+                The EEG file is analysed immediately on upload. Fill in recording details, then submit the final report.
               </div>
               {submitError && <p className="mt-3 text-sm text-rose-600">{submitError}</p>}
             </div>
@@ -461,7 +550,12 @@ export default function EegTechnicianReport() {
             </div>
           </div>
         );
-      case 2:
+
+      /*
+      // =========================================================================
+      // Step: Patient details (Commented out: Patient details are loaded from previous form)
+      // =========================================================================
+      case 2_DISABLED:
         return (
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-4">
@@ -559,7 +653,8 @@ export default function EegTechnicianReport() {
             </div>
           </div>
         );
-      case 3:
+      */
+      case 2:
         return (
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-4">
@@ -597,7 +692,44 @@ export default function EegTechnicianReport() {
               </div>
               <div>
                 <Label htmlFor="recordType">Record type</Label>
-                <Select value={report.recordType} onValueChange={(value) => handleFieldChange("recordType", value)}>
+                <Select
+                  value={report.recordType}
+                  onValueChange={async (value) => {
+                    handleFieldChange("recordType", value);
+                    if (report.file) {
+                      setIsAnalyzingFile(true);
+                      try {
+                        const analysis = await analyzeEEGFile(report.file, value);
+                        setAnalysisResult(analysis);
+                        const bgClass = analysis.background_class ?? "normal";
+                        setBackground(["normal", "slow", "sedated"].includes(bgClass) ? bgClass : "custom");
+                        setReport((prev) => ({
+                          ...prev,
+                          recordType: value,
+                          backgroundText:
+                            analysis.finding_background || analysis.background_text || prev.backgroundText,
+                          normalFindings:
+                            analysis.normal_chips && analysis.normal_chips.length
+                              ? analysis.normal_chips
+                              : prev.normalFindings,
+                          abnormalFindings:
+                            analysis.abnormal_chips && analysis.abnormal_chips.length
+                              ? analysis.abnormal_chips
+                              : [],
+                          regions:
+                            analysis.region_chips && analysis.region_chips.length
+                              ? analysis.region_chips
+                              : prev.regions,
+                          conclusion: analysis.conclusion_draft || prev.conclusion,
+                        }));
+                      } catch (err) {
+                        console.error("EEG pre-analysis failed on recordType change:", err);
+                      } finally {
+                        setIsAnalyzingFile(false);
+                      }
+                    }
+                  }}
+                >
                   <SelectTrigger id="recordType">
                     <SelectValue placeholder="Select" />
                   </SelectTrigger>
@@ -612,9 +744,21 @@ export default function EegTechnicianReport() {
             </div>
           </div>
         );
-      case 4:
+      case 3:
         return (
           <div className="space-y-6">
+            {analysisResult && (
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-3 text-sm text-blue-800">
+                <span className="font-medium">AI detected:</span> Background class —{" "}
+                <span className="font-semibold capitalize">{analysisResult.background_class}</span>
+                {analysisResult.background_detail?.alpha_hz && (
+                  <span className="ml-2 text-blue-600">· Alpha {analysisResult.background_detail.alpha_hz} Hz</span>
+                )}
+                {analysisResult.warnings && analysisResult.warnings.length > 0 && (
+                  <p className="mt-1 text-amber-700">⚠ {analysisResult.warnings[0]}</p>
+                )}
+              </div>
+            )}
             <div className="flex flex-wrap gap-2">
               {backgroundOptions.map((option) => (
                 <button
@@ -648,9 +792,37 @@ export default function EegTechnicianReport() {
             </div>
           </div>
         );
-      case 5:
+      case 4:
         return (
           <div className="space-y-6">
+            {analysisResult && (
+              <div
+                className={cn(
+                  "rounded-xl border p-3 text-sm",
+                  analysisResult.is_abnormal
+                    ? "border-rose-200 bg-rose-50 text-rose-800"
+                    : "border-emerald-200 bg-emerald-50 text-emerald-800",
+                )}
+              >
+                <span className="font-medium">AI finding:</span>{" "}
+                {analysisResult.is_abnormal ? (
+                  <>
+                    <span className="font-semibold">Epileptiform / abnormal activity detected</span>
+                    {analysisResult.abnormal_chips && analysisResult.abnormal_chips.length > 0 && (
+                      <span className="ml-2">— {analysisResult.abnormal_chips.join(", ")}</span>
+                    )}
+                    {analysisResult.region_chips && analysisResult.region_chips.length > 0 && (
+                      <span className="ml-2 text-rose-600">· Regions: {analysisResult.region_chips.join(", ")}</span>
+                    )}
+                  </>
+                ) : (
+                  <span className="font-semibold">No epileptiform discharges seen</span>
+                )}
+                {analysisResult.sleep_marker && (
+                  <p className="mt-1 text-xs opacity-80">Sleep: {analysisResult.sleep_marker}</p>
+                )}
+              </div>
+            )}
             <div className="space-y-3">
               <p className="text-sm font-medium text-foreground">Normal findings</p>
               <div className="flex flex-wrap gap-2">
@@ -721,9 +893,14 @@ export default function EegTechnicianReport() {
             </div>
           </div>
         );
-      case 6:
+      case 5:
         return (
           <div className="space-y-6">
+            {analysisResult && (
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-3 text-sm text-blue-800">
+                <span className="font-medium">AI conclusion draft loaded.</span> Edit below as needed before submitting.
+              </div>
+            )}
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
               <div className="flex items-center gap-2 text-sm font-medium text-primary">
                 <FileText className="h-4 w-4" />
@@ -759,7 +936,7 @@ export default function EegTechnicianReport() {
             </div>
           </div>
         );
-      case 7:
+      case 6:
         return (
           <div className="space-y-6">
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
@@ -918,20 +1095,29 @@ export default function EegTechnicianReport() {
                     <ArrowLeft className="h-4 w-4" />
                     Back
                   </Button>
-                  {currentStep === 7 ? (
-                    <Button className="gap-2" onClick={handleFinalSubmit} disabled={isSubmitting}>
+                  {currentStep === 6 ? (
+                    <Button className="gap-2" onClick={handleFinalSubmit} disabled={isSubmitting || isSubmitted}>
                       <FileText className="h-4 w-4" />
-                      {isSubmitting ? "Submitting..." : "Submit report"}
+                      {isSubmitting ? "Submitting..." : isSubmitted ? "Submitted ✓" : "Submit report"}
                     </Button>
-                  ) : currentStep === 6 ? (
-                    <Button className="gap-2" onClick={handleSubmitReport} disabled={!report.file || !report.patientName}>
+                  ) : currentStep === 5 ? (
+                    <Button className="gap-2" onClick={handleSubmitReport} disabled={!report.file || (!report.patientName && !incomingPatient)}>
                       Review
                       <ArrowRight className="h-4 w-4" />
                     </Button>
                   ) : (
-                    <Button className="gap-2" onClick={goNext} disabled={currentStep === 1 && !report.file}>
-                      Next
-                      <ArrowRight className="h-4 w-4" />
+                    <Button className="gap-2" onClick={goNext} disabled={currentStep === 1 && (!report.file || isAnalyzingFile)}>
+                      {currentStep === 1 && isAnalyzingFile ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Analysing…
+                        </>
+                      ) : (
+                        <>
+                          Next
+                          <ArrowRight className="h-4 w-4" />
+                        </>
+                      )}
                     </Button>
                   )}
                 </div>

@@ -40,9 +40,25 @@ export async function analyzeEEG(eegId: string) {
   return res.json();
 }
 
+// Analyze EEG File via /v1/analyze-eeg
+export async function analyzeEEGFile(file: File, recordType?: string) {
+  const formData = new FormData();
+  formData.append("file", file);
+  if (recordType) {
+    formData.append("record_type", recordType);
+  }
+
+  const res = await fetchWithAuth(`${API_BASE_URL}/v1/analyze-eeg`, {
+    method: "POST",
+    body: formData,
+  });
+
+  return handleResponse<Record<string, any>>(res);
+}
+
 export async function processEEG(params: {
   file: File;
-  pid: string;
+  pid?: string;
   name: string;
   age?: string;
   sex?: string;
@@ -71,10 +87,11 @@ export async function processEEG(params: {
   gender?: string;
   diagnosis?: string;
   medications?: string;
+  precomputedAutofill?: any;
 }) {
   const formData = new FormData();
   formData.append("file", params.file);
-  formData.append("pid", params.pid);
+  if (params.pid) formData.append("pid", params.pid);
   formData.append("name", params.name);
   formData.append("report_data", JSON.stringify(params));
 
@@ -106,6 +123,10 @@ export async function processEEG(params: {
   formData.append("normal_findings", JSON.stringify(params.normalFindings ?? []));
   formData.append("abnormal_findings", JSON.stringify(params.abnormalFindings ?? []));
   formData.append("regions", JSON.stringify(params.regions ?? []));
+
+  if (params.precomputedAutofill) {
+    formData.append("precomputed_autofill", JSON.stringify(params.precomputedAutofill));
+  }
 
   const res = await fetchWithAuth(`${API_BASE_URL}/v1/process-eeg`, {
     method: "POST",

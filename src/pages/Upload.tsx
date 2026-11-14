@@ -562,7 +562,30 @@ export default function Upload() {
     });
 
     if (selectedModule === "technician") {
-      navigate("/eeg-technician-report", { state: { jobId: uploadedJobId } });
+      const pInfo = {
+        id: details.id,
+        name: details.name,
+        age: details.age,
+        gender: details.gender,
+        handedness: details.handedness,
+        neuroNo: details.neuroNo,
+        uhid: details.uhid,
+        eegNo: details.eegNo,
+        doctor: details.doctor,
+        hospital: details.hospital,
+        hospitalAddress: details.hospitalAddress,
+      };
+      try {
+        sessionStorage.setItem("technician_patient_info", JSON.stringify(pInfo));
+      } catch (e) {
+        console.error(e);
+      }
+      navigate("/eeg-technician-report", {
+        state: {
+          jobId: uploadedJobId,
+          patientInfo: pInfo,
+        },
+      });
       return;
     }
     if (selectedModule === "eeg-analysis") {
@@ -1206,21 +1229,27 @@ export default function Upload() {
                         });
                         return;
                       }
+                      const pInfo = {
+                        name: details.name,
+                        age: details.age,
+                        gender: details.gender,
+                        id: details.id,
+                        handedness: details.handedness,
+                        neuroNo: details.neuroNo,
+                        uhid: details.uhid,
+                        eegNo: details.eegNo,
+                        doctor: details.doctor,
+                        hospital: details.hospital,
+                        hospitalAddress: details.hospitalAddress,
+                      };
+                      try {
+                        sessionStorage.setItem("technician_patient_info", JSON.stringify(pInfo));
+                      } catch (e) {
+                        console.error(e);
+                      }
                       navigate("/eeg-technician-report", {
                         state: {
-                          patientInfo: {
-                            name: details.name,
-                            age: details.age,
-                            gender: details.gender,
-                            id: details.id,
-                            handedness: details.handedness,
-                            neuroNo: details.neuroNo,
-                            uhid: details.uhid,
-                            eegNo: details.eegNo,
-                            doctor: details.doctor,
-                            hospital: details.hospital,
-                            hospitalAddress: details.hospitalAddress,
-                          },
+                          patientInfo: pInfo,
                         },
                       });
                     }}
